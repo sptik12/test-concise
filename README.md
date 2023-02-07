@@ -9,7 +9,15 @@ Installation notes:
    
    docker-compose up
    
-5. Now you can check test app entering http://localhost:8888 in your browser.
+5. Now you can check test app opening web container in terminal and entering
+such command like:
 
-6. You can view database using PhpMyAdmin opening http://localhost:8889 in your browser.
+php yii image/generate 200,300,500 
+php yii image/generate 200,300x400,500 
+php yii image/generate 200,1x400,500    -  будет исключение, не все миниатюры сгенерируются
+php yii image/generate 200,100,500 1 0
+php yii image/generate 200,100,500 0 0
+php yii image/generate 200,100,500 0 1
+php yii image/generate 200,100,500 1 1
 
+etc.
