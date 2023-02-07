@@ -32,7 +32,7 @@ class ProductQuery extends \yii\db\ActiveQuery
 	 */
 	public function stored()
 	{
-		return $this->andWhere(['in', 'id', StoreProduct::find()->select('product_id')->column()]);
+		return $this->andWhere(['in', 'id', StoreProduct::find()->select('product_id')->distinct()->column()]);
 	}
 
 	/**
